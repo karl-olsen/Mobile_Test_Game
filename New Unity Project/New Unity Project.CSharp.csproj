@@ -63,31 +63,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AS_Passive.cs" />
-    <Compile Include="Assets\Scripts\AS_Q.cs" />
-    <Compile Include="Assets\Scripts\Champ.cs" />
-    <Compile Include="Assets\Scripts\Claw.cs" />
-    <Compile Include="Assets\Scripts\Mobile_Scripts\Arrow_Movement.cs" />
-    <Compile Include="Assets\Scripts\Mobile_Scripts\Camera_Follow_Player.cs" />
-    <Compile Include="Assets\Scripts\Mobile_Scripts\Camera_Position.cs" />
-    <Compile Include="Assets\Scripts\Mobile_Scripts\Damage_Enemy.cs" />
-    <Compile Include="Assets\Scripts\Mobile_Scripts\Damage_Player.cs" />
-    <Compile Include="Assets\Scripts\Mobile_Scripts\Delete_Timer.cs" />
-    <Compile Include="Assets\Scripts\Mobile_Scripts\Enemy_HP.cs" />
-    <Compile Include="Assets\Scripts\Mobile_Scripts\Freeze_Rotation.cs" />
-    <Compile Include="Assets\Scripts\Mobile_Scripts\Patrol.cs" />
-    <Compile Include="Assets\Scripts\Mobile_Scripts\Player_Health.cs" />
-    <Compile Include="Assets\Scripts\Mobile_Scripts\Player_Points.cs" />
-    <Compile Include="Assets\Scripts\Mobile_Scripts\Player_Turning_Movement.cs" />
-    <Compile Include="Assets\Scripts\Mobile_Scripts\Portal.cs" />
-    <Compile Include="Assets\Scripts\Mobile_Scripts\Pull_Target.cs" />
-    <Compile Include="Assets\Scripts\Mobile_Scripts\Shoot.cs" />
-    <Compile Include="Assets\Scripts\Mobile_Scripts\Touch_Delete.cs" />
-    <Compile Include="Assets\Scripts\Mobile_Scripts\Wheel_Turn.cs" />
-    <Compile Include="Assets\Scripts\Orbit.cs" />
-    <Compile Include="Assets\Scripts\Orbit_Center.cs" />
-    <Compile Include="Assets\Scripts\Player_Shoot.cs" />
-    <Compile Include="Assets\Scripts\Starsurge.cs" />
+    <Compile Include="Assets\Scripts\Arrow_Movement.cs" />
+    <Compile Include="Assets\Scripts\Camera_Follow_Player.cs" />
+    <Compile Include="Assets\Scripts\Camera_Position.cs" />
+    <Compile Include="Assets\Scripts\Damage_Enemy.cs" />
+    <Compile Include="Assets\Scripts\Damage_Player.cs" />
+    <Compile Include="Assets\Scripts\Delete_Timer.cs" />
+    <Compile Include="Assets\Scripts\Enemy_HP.cs" />
+    <Compile Include="Assets\Scripts\Freeze_Rotation.cs" />
+    <Compile Include="Assets\Scripts\Patrol.cs" />
+    <Compile Include="Assets\Scripts\Player_Health.cs" />
+    <Compile Include="Assets\Scripts\Player_Points.cs" />
+    <Compile Include="Assets\Scripts\Player_Turning_Movement.cs" />
+    <Compile Include="Assets\Scripts\Portal.cs" />
+    <Compile Include="Assets\Scripts\Pull_Target.cs" />
+    <Compile Include="Assets\Scripts\Shoot.cs" />
+    <Compile Include="Assets\Scripts\Touch_Delete.cs" />
+    <Compile Include="Assets\Scripts\Wheel_Turn.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fonts\SIL Open Font License.txt" />
