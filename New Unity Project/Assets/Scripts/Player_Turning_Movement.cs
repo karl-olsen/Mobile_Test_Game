@@ -16,11 +16,6 @@ public class Player_Turning_Movement : MonoBehaviour {
     Rigidbody this_rb;
 
 
-    //constant scale (to prevent changing local/global scale when parenting to moving platform)
-    Vector3 unparent_sc = new Vector3(1, 1, 1);
-
-    Vector3 parent_sc = new Vector3(0.249f, 2.141221f, 0.1675f);
-
     // Use this for initialization
     void Start () {
         this_rb = this.gameObject.GetComponent<Rigidbody>();
@@ -38,7 +33,7 @@ public class Player_Turning_Movement : MonoBehaviour {
         //parent player to the platform when landing on it in order to have player move with it
         if (col.gameObject.tag == "Moving_Platform")
         {
-            transform.parent = col.gameObject.transform.GetChild(0);
+            transform.parent = col.gameObject.transform.parent;
         }
     }
 
@@ -148,11 +143,6 @@ public class Player_Turning_Movement : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space) && is_falling == false)
             Jump();
 
-
-        if (transform.parent == null)
-            transform.localScale = unparent_sc;
-        else
-            transform.localScale = parent_sc;
     }
 
 

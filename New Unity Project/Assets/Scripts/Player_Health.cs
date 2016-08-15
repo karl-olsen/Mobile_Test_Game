@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Player_Health : MonoBehaviour {
@@ -21,12 +22,11 @@ public class Player_Health : MonoBehaviour {
 
     public void Hurt(int damage)
     {
-        Debug.Log(damage);
         current_HP = current_HP - damage;
 
         if(current_HP <= 0)
         {
-            Application.LoadLevel(Application.loadedLevel);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
