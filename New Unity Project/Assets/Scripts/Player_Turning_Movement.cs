@@ -12,6 +12,7 @@ public class Player_Turning_Movement : MonoBehaviour {
     public float jump_height = 8;
 
     public bool is_falling = false;
+    public bool on_wall = false;
 
     Rigidbody this_rb;
 
@@ -26,7 +27,7 @@ public class Player_Turning_Movement : MonoBehaviour {
     {
         if (is_falling == true)
         {
-            if (col.gameObject.tag == "Floor" || col.gameObject.tag == "Moving_Platform")
+            if (col.gameObject.tag == "Floor" || col.gameObject.tag == "Moving_Platform" || col.gameObject.tag == "Wall")
                 is_falling = false;
         }
 
@@ -34,6 +35,10 @@ public class Player_Turning_Movement : MonoBehaviour {
         if (col.gameObject.tag == "Moving_Platform")
         {
             transform.parent = col.gameObject.transform.parent;
+        }
+        if (col.gameObject.tag == "Wall")
+        {
+            on_wall = true;
         }
     }
 
@@ -44,9 +49,14 @@ public class Player_Turning_Movement : MonoBehaviour {
         {
             transform.parent = null;
         }
-        if (col.gameObject.tag == "Moving_Platform" || col.gameObject.tag == "Floor")
+        //reset the falling boolean when the player jumps/falls off the object
+        if (col.gameObject.tag == "Moving_Platform" || col.gameObject.tag == "Floor" || col.gameObject.tag == "Wall")
         {
             is_falling = true;
+        }
+        if (col.gameObject.tag == "Wall")
+        {
+            on_wall = false;
         }
     }
 
@@ -113,18 +123,14 @@ public class Player_Turning_Movement : MonoBehaviour {
 
     public void Jump()
     {
-        if (is_falling == false)
+        if (!(is_falling == true && on_wall == false))
         {
+            on_wall = false;
             is_falling = true;
             this_rb.velocity = new Vector3(0, jump_height, 0);
         }
     }
-
-    void OnCollisionStay()
-    {
-        is_falling = false;
-    }
-
+    
     // Update is called once per frame
     void Update () {
         if (Input.GetKey(KeyCode.LeftArrow))

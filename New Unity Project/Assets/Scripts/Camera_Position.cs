@@ -7,8 +7,8 @@ public class Camera_Position : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        pos = new Vector3(2.444267e-12f, 3.38f, -4.459999f);
-        rot = new Vector3(30, 0, 0);
+        pos = new Vector3(-4.768424e-09f, 0.7399998f, -4.459999f);
+        rot = new Vector3(16, 0, 0);
 	}
 	
 	// Update is called once per frame

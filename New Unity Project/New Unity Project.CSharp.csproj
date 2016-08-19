@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\Portal.cs" />
     <Compile Include="Assets\Scripts\Pull_Target.cs" />
     <Compile Include="Assets\Scripts\Shoot.cs" />
+    <Compile Include="Assets\Scripts\Timed_Shoot.cs" />
     <Compile Include="Assets\Scripts\Touch_Delete.cs" />
     <Compile Include="Assets\Scripts\Wheel_Turn.cs" />
   </ItemGroup>
