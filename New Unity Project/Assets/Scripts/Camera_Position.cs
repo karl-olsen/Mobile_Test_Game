@@ -7,8 +7,10 @@ public class Camera_Position : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        pos = new Vector3(-4.768424e-09f, 0.7399998f, -4.459999f);
-        rot = new Vector3(16, 0, 0);
+        //pos = new Vector3(-4.768424e-09f, 0.7399998f, -4.459999f);
+        //rot = new Vector3(16, 0, 0);
+        pos = this.transform.localPosition;
+        rot = this.transform.localRotation.eulerAngles;
 	}
 	
 	// Update is called once per frame
